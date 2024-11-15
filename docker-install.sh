@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read -p 'Username for Docker: ' uservar
+
 ### REMOVE OLD PACKAGES
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 
@@ -21,7 +23,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ### ADD USER TO DOCKER GROUP
-sudo usermod -aG docker $USER
+sudo usermod -aG docker $uservar
 
 ### START DOCKER AT BOOT
 sudo systemctl enable docker.service
