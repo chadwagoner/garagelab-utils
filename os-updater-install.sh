@@ -12,3 +12,11 @@ EOF
 
 ### INSTALL OS-UPDATER
 echo $os_updater | sudo tee /etc/cron.monthly/os-updater >/dev/null
+
+### PAUSE FOR 60 SECONDS
+/usr/bin/sleep 60
+
+### REBOOT IF REQUIRED
+if [[ -f /var/run/reboot-required ]]; then
+  shutdown -r now
+fi
