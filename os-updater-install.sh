@@ -2,6 +2,8 @@
 
 ### OS-UPDATER
 os_updater=$(cat << 'EOF'
+#!/bin/bash
+
 apt-get update && \
 apt-get upgrade && \
 apt-get dist-upgrade && \
