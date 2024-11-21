@@ -1,5 +1,13 @@
 # garagelab-utils
 
+# ADGUARD HOME
+
+## CONFIGURE
+
+```bash
+curl -sL -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/chadwagoner/garagelab-utils/main/adguard-config.sh | bash
+```
+
 # DOCKER
 
 ## INSTALL
